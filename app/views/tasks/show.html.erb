@@ -1,10 +1,17 @@
-<h1>Task View</h1>
+<div class="container">
+  <h1>Task View</h1>
+  <div class="col-12">
+    
+    <div>
+      <h2><%= @task.title %></h2>
+      <p><%= @task.details %></p>
+      
+      <% if @task.completed == false %>
+        <p>☐ task is not complete</p>
+      <% else %>
+        <p>🗹 task is complete</p>
+      <% end %> 
+    </div>
 
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-
-<% if @task.completed == false %>
-  <p>☐ task is not complete</p>
-<% else %>
-  <p>🗹 task is complete</p>
-<% end %>  
+  </div> 
+</div>
